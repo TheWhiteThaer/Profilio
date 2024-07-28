@@ -1,0 +1,59 @@
+#AboutMe {
+  font-family: "Merienda";
+}
+
+#AboutContainer {
+  width: 1000px;
+  margin: 100px auto; /* Centers the <div> horizontally */
+  text-align: center; /* Optional: Centers content inside the <div> */
+  color: whitesmoke;
+}
+
+#AboutContainer {
+  font-family: "Roboto";
+  font-size: 20px;
+  user-select: none;
+}
+
+#languagesLogos {
+  margin: 20px;
+  cursor: pointer;
+}
+
+#SocialMediaLogos {
+  cursor: pointer;
+}
+
+#JavaScript {
+  width: 105px;
+  position: relative;
+  left: -300px;
+}
+
+#CPP {
+  width: 100px;
+}
+
+#CSharp {
+  width: 120px;
+  position: relative;
+  top: 4px;
+  left: 300px;
+}
+
+#X {
+  width: 90px;
+}
+
+#Youtube {
+  width: 110px;
+}
+
+#Gmail {
+  width: 110px;
+  cursor: pointer;
+}
+
+#Instagram {
+  width: 110px;
+}

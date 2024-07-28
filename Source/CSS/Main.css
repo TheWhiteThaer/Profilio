@@ -1,0 +1,74 @@
+body {
+  background-color: rgb(8, 11, 54);
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  height: 100%;
+  width: 100%;
+}
+
+#spaceCanvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1; /* This ensures the canvas is behind the content */
+}
+
+#Navigator {
+  user-select: none;
+  position: fixed;
+  top: 10px;
+  z-index: 1;
+}
+
+.NavigatorText {
+  font-family: "Righteous";
+  font-size: 20px;
+  margin: 20px;
+  cursor: pointer;
+  color: whitesmoke;
+}
+
+.material-symbols-outlined {
+  font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
+}
+
+.roboto-thin {
+  font-family: "Roboto", sans-serif;
+  font-weight: 100;
+  font-style: normal;
+}
+
+.merienda {
+  font-family: "Merienda", sans-serif;
+  font-weight: 100;
+  font-style: normal;
+}
+
+.righteous-regular {
+  font-family: "Righteous", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+@keyframes HoverScale {
+  100% {
+    transform: scale(1.5);
+  }
+}
+
+@keyframes NotHoverScale {
+  50% {
+    transform: scale(1.5);
+  }
+}
+
+.HoverScale {
+  animation: HoverScale 0.5s forwards;
+}
+
+.NotHoverScale {
+  animation: NotHoverScale 0.5s both;
+}

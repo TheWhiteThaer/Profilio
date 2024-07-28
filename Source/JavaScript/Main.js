@@ -70,3 +70,22 @@ function addFont(url) {
   font.setAttribute("type", "text/css");
   document.head.appendChild(font);
 }
+
+export const SocialMedias = [
+  { Name: "Whatsapp", Source: "https://wa.me/+963984518232" },
+  {
+    Name: "Facebook",
+    Source: "https://www.facebook.com/Thaer-Ayoub-100000090821754/",
+  },
+  { Name: "Instagram", Source: "https://www.instagram.com/thewhitethaer/" },
+  { Name: "X", Source: "https://x.com/TheWhiteThaer" },
+  {
+    Name: "Gmail",
+    Source:
+      "https://mail.google.com/mail/u/0/?tab=rm&ogbl#inbox?compose=DmwnWstwNRQGhTmbDfmrrgkfNmmqnBCbzNwZqqwFJzlPRNBVKVCBHnCFZhSRWRrMBRmpkrWMkWmB",
+  },
+  {
+    Name: "Youtube",
+    Source: "https://www.youtube.com/channel/UC_yAalS8t5e8JT0u9434Ygw",
+  },
+];

@@ -1,16 +1,16 @@
-let buttons = ["Projects", "About", "Contact"];
+let Buttons = ["Projects", "About", "Contact"];
 
-for (const button of buttons) {
-  let b = document.getElementById(button + "Button");
-  b.onclick = () => {
-    location.replace("../HTML/" + button + ".html");
+for (const ButtonElement of Buttons) {
+  let Button = document.getElementById(ButtonElement + "Button");
+  Button.onclick = () => {
+    location.replace("../HTML/" + ButtonElement + ".html");
   };
-  b.onmouseenter = () => {
-    b.classList.add("HoverScale");
-    b.classList.remove("NotHoverScale");
+  Button.onmouseenter = () => {
+    Button.classList.add("HoverScale");
+    Button.classList.remove("NotHoverScale");
   };
-  b.onmouseleave = () => {
-    b.classList.add("NotHoverScale");
-    b.classList.remove("HoverScale");
+  Button.onmouseleave = () => {
+    Button.classList.add("NotHoverScale");
+    Button.classList.remove("HoverScale");
   };
 }

@@ -1,64 +1,42 @@
-let languages = ["JavaScript", "CPP", "CSharp"];
-let socialMedias = ["X", "Youtube", "Instagram"];
-let gmail = document.getElementById("Gmail");
+import { SocialMedias } from "./Main.js";
 
-for (const language of languages) {
-  let l = document.getElementById(language);
-  l.onclick = () => {
-    switch (language) {
-      case "JavaScript":
-        window.open("https://www.w3schools.com/js/");
-      case "CPP":
-        window.open("https://www.w3schools.com/cpp/");
-      case "CSharp":
-        window.open("https://learn.microsoft.com/en-us/dotnet/csharp/");
-    }
+let Languages = [
+  { Name: "JavaScript", Source: "https://www.w3schools.com/js/" },
+  { Name: "Python", Source: "https://www.w3schools.com/python/" },
+  {
+    Name: "CSharp",
+    Source: "https://learn.microsoft.com/en-us/dotnet/csharp/",
+  },
+];
+
+for (const LanguagesElement of Languages) {
+  let Language = document.getElementById(LanguagesElement.Name);
+  Language.onclick = () => {
+    window.open(LanguagesElement.Source);
   };
-  l.onmouseenter = () => {
-    l.classList.add("HoverScale");
-    l.classList.remove("NotHoverScale");
+  Language.onmouseenter = () => {
+    Language.classList.add("HoverScale");
+    Language.classList.remove("NotHoverScale");
   };
-  l.onmouseleave = () => {
-    l.classList.add("NotHoverScale");
-    l.classList.remove("HoverScale");
+  Language.onmouseleave = () => {
+    Language.classList.add("NotHoverScale");
+    Language.classList.remove("HoverScale");
   };
 }
 
-for (const socialMedia of socialMedias) {
-  let s = document.getElementById(socialMedia);
-  if (s) {
-    s.onclick = () => {
-      switch (socialMedia) {
-        case "X":
-          window.open("https://x.com/TheWhiteThaer");
-        case "Youtube":
-          window.open(
-            "https://www.youtube.com/channel/UC_yAalS8t5e8JT0u9434Ygw"
-          );
-      }
+for (const SocialMediaElement of SocialMedias) {
+  let SocialMedia = document.getElementById(SocialMediaElement.Name);
+  if (SocialMedia) {
+    SocialMedia.onclick = () => {
+      window.open(SocialMediaElement.Source);
     };
-    s.onmouseenter = () => {
-      s.classList.add("HoverScale");
-      s.classList.remove("NotHoverScale");
+    SocialMedia.onmouseenter = () => {
+      SocialMedia.classList.add("HoverScale");
+      SocialMedia.classList.remove("NotHoverScale");
     };
-    s.onmouseleave = () => {
-      s.classList.add("NotHoverScale");
-      s.classList.remove("HoverScale");
+    SocialMedia.onmouseleave = () => {
+      SocialMedia.classList.add("NotHoverScale");
+      SocialMedia.classList.remove("HoverScale");
     };
   }
 }
-
-gmail.onclick = () => {
-  window.open(
-    "https://mail.google.com/mail/u/0/?tab=rm&ogbl#inbox?compose=DmwnWstwNRQGhTmbDfmrrgkfNmmqnBCbzNwZqqwFJzlPRNBVKVCBHnCFZhSRWRrMBRmpkrWMkWmB"
-  );
-};
-
-gmail.onmouseenter = () => {
-  gmail.classList.add("HoverScale");
-  gmail.classList.remove("NotHoverScale");
-};
-gmail.onmouseleave = () => {
-  gmail.classList.add("NotHoverScale");
-  gmail.classList.remove("HoverScale");
-};

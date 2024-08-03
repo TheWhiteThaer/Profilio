@@ -33,12 +33,12 @@ body {
 
 @keyframes Floating {
   0% {
-    top: 20vh;
+    top: 40vh;
   }
   50% {
-    top: 22vh;
+    top: 32vh;
   }
   100% {
-    top: 20vh;
+    top: 40vh;
   }
 }

@@ -4,44 +4,37 @@ import {
   OnMouse,
   Make_Element,
   Add,
+  getEl,
+  Random,
 } from "./JavaScriptTools.js";
 import { getOffset } from "./Utils.js";
 
 let ThaerAyoub = document.getElementById("ThaerAyoub");
 
 ThaerAyoub.onclick = () => {
-  window.open("../HTML/About.html");
+  window.open("../HTML/About.html", "_self");
 };
 
-function AddClouds(Number) {
-  for (let index = 0; index < Number; index++) {
-    let RandomCloud = Math.floor(Math.random() * 3) + 1;
-    let Animation = "MovesLeft";
-    let Cloud = Make_Element(
-      "img",
-      [
-        {
-          Name: "src",
-          Value: `../../Assets/Images/Clouds/Cloud${RandomCloud}.png`,
-        },
-      ],
-      null,
-      `Cloud${RandomCloud}`
-    );
+let Circles = getEl("Circles");
+Edit_Style(
+  Circles,
+  `
+  position: fixed;
+  border:1px solid #000000;
+  width: 99%;
+  `
+);
 
-    Edit_Style(
-      Cloud,
-      `Position: (${Math.floor(
-        Math.random() * screen.availWidth - 500
-      )}px, -20px); 
-      z-index: -2;., 
-      Scale: (${Math.floor(Math.random() * 20 + 10)}%, 
-      ${Math.floor(Math.random() * 10)}%); 
-      user-select: none;
-      `
-    );
-    Add(Cloud);
-  }
+var ctx = Circles.getContext("2d");
+ctx.beginPath();
+ctx.imageSmoothingEnabled = false;
+for (let index = 0; index <= 10; index++) {
+  ctx.arc(
+    Random(0, Circles.clientWidth, true),
+    Random(0, Circles.clientHeight, true),
+    10,
+    0,
+    3 * Math.PI
+  );
 }
-
-AddClouds(10);
+ctx.stroke();

@@ -77,3 +77,15 @@ export function addFont(url) {
   font.setAttribute("type", "text/css");
   document.head.appendChild(font);
 }
+
+export function getEl(id) {
+  return document.getElementById(id);
+}
+
+export function Random(min, max, floor) {
+  let random = 0;
+  floor
+    ? (random = Math.floor(Math.random() * max + min))
+    : (random = Math.random() * max + min);
+  return random;
+}

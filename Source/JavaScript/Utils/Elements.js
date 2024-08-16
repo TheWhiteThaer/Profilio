@@ -1,4 +1,4 @@
-import { AssignPropertyToCSS, Get_Property } from "./Utils.js";
+import { AssignPropertyToCSS, Get_Property } from "../Utils.js";
 
 export function Change_Style(Element, Property, Value) {
   try {
@@ -54,38 +54,6 @@ export function Add(Element) {
   }
 }
 
-export function OnMouse(Element, OnEnter, OnLeave) {
-  Element.onmouseenter = OnEnter;
-  Element.onmouseleave = OnLeave;
-}
-
-export async function Translate(Element, Language, Page, Parent) {
-  const response = await fetch(`../../Assets/Translations/${Language}.json`);
-  const Translations = await response.text();
-  const json = JSON.parse(Translations);
-  if (!Parent) {
-    Element.textContent = json[Page];
-    return;
-  }
-  Element.textContent = json[Page][Parent][Element.id];
-}
-
-export function addFont(url) {
-  const font = document.createElement("link");
-  font.setAttribute("rel", "stylesheet");
-  font.setAttribute("href", url);
-  font.setAttribute("type", "text/css");
-  document.head.appendChild(font);
-}
-
 export function getEl(id) {
   return document.getElementById(id);
-}
-
-export function Random(min, max, floor) {
-  let random = 0;
-  floor
-    ? (random = Math.floor(Math.random() * max + min))
-    : (random = Math.random() * max + min);
-  return random;
 }

@@ -1,0 +1,13 @@
+[
+  {
+    "Name": "Sexuality Simulator",
+    "Date": {
+      "Year": 2024,
+      "Month": "July",
+      "Day": 20
+    },
+    "Image": "Sexuality Simulator",
+    "Description": "This is a basic simulation (far from done or being correct) about the human sexuality",
+    "Github": "https://github.com/TheWhiteThaer/Sexuality_Simulator"
+  }
+]

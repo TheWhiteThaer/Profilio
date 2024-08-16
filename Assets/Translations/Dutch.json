@@ -1,0 +1,17 @@
+{
+  "Main": {
+    "InfoBar": {
+      "Home": "Startpagina",
+      "Projects": "Projecten",
+      "About": "Over mijn",
+      "Contact": "Contact"
+    }
+  },
+  "Home": {
+    "Intro": {
+      "HelloThere": "Hoi, Ik Ben",
+      "ThaerAyoub": "Thaer Ayoub",
+      "Backend": "Een Backend / Softwareontwikkelaar"
+    }
+  }
+}

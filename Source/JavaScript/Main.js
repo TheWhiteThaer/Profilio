@@ -1,14 +1,15 @@
 import {
   Add,
-  addFont,
   Change_Style,
   Edit_Style,
   Make_Element,
-  OnMouse,
-  Translate,
-} from "./JavaScriptTools.js";
-import { tween } from "./JSTween.js";
+} from "./Utils/Elements.js";
+
+import { OnMouse } from "./Utils/Mouse.js";
+
 import { TextFont, Language } from "./Shared.js";
+
+import { addFont } from "./Utils/Font.js";
 
 addFont(
   "https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Pixelify+Sans:wght@400..700&family=Ubuntu+Sans+Mono:ital,wght@0,400..700;1,400..700&display=swap"
@@ -53,7 +54,6 @@ function InfoBarLogic() {
     InfoBarElements.onclick = () => {
       window.open("../HTML/" + element + ".html", "_self");
     };
-    Translate(InfoBarElements, "English", "Main", "InfoBar");
 
     InfoBar.appendChild(InfoBarElements);
   });
@@ -67,8 +67,3 @@ function InfoBarLogic() {
 InfoBarLogic();
 
 document.body.style.overflowX = "hidden";
-// var path = window.location.pathname;
-// var page = path.split("/").pop().split(".")[0];
-
-// if (page == "Home") {
-// }

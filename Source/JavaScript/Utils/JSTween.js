@@ -1,5 +1,3 @@
-import { getOffset } from "./Utils.js";
-
 export function tween(Element, Properties, Duration, callBack) {}
 
 export function Animate(FrameHeight, Frames, Image) {

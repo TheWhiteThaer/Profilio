@@ -6,5 +6,12 @@
       "About": "About",
       "Contact": "Contact"
     }
+  },
+  "Home": {
+    "Intro": {
+      "HelloThere": "Hello There",
+      "ThaerAyoub": "Thaer Ayoub",
+      "Backend": "A Backend / Software Developer"
+    }
   }
 }
